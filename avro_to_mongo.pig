@@ -17,5 +17,5 @@ define MongoStorage com.mongodb.hadoop.pig.MongoStorage(); /* Shortcut */
 /* By default, lets have 5 reducers */
 set default_parallel 5
 
-avros = load '$avros' using AvroStorage();
-store avros into '$mongourl' using MongoStorage();
+avros = load '$avros' using AvroStorage(); /* For example, 'enron.avro' */
+store avros into '$mongourl' using MongoStorage(); /* For example, 'mongodb://localhost/enron.emails' */
