@@ -25,8 +25,7 @@ http.createServer(function (req, res) {
     }
     if(item) {
       res.writeHead(200, {'Content-Type': 'application/json'});
-      res.send(JSON.stringify(item));
-      res.end();
+      res.end(JSON.stringify(item), null, 4);
     }
   });
 
